@@ -37,7 +37,7 @@ function pokeShow(pokeName, pokeImg, pokeType) {
 	typeTag.className = "card-typeTag";
     let type = document.createElement("p");
     type.innerText = pokeType.toUpperCase();
-	card.appendChild(typeTag);
+	//card.appendChild(typeTag);
     card.appendChild(type);
 	type.className = "card-type";
 

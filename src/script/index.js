@@ -13,7 +13,7 @@ function pokeButton() {
 
 function pokeShow(pokeName, pokeImg, pokeType) {
     //limpio el container
-    container.innerHTML = "";
+    
 
     //creo el card
     let card = document.createElement("div");
@@ -49,10 +49,12 @@ function catchEmAll(random) {
     fetch(URL + random)
         .then((res) => res.json())
         .then((data) => {
+			
             let pokeImage = data.sprites.other.dream_world.front_default;
             let pokeName = data.name;
             let pokeType = data.types[0].type.name;
 
             pokeShow(pokeName, pokeImage, pokeType);
+			
         });
 }
